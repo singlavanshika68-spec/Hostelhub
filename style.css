@@ -1,0 +1,130 @@
+:root {
+  --ink: #292b32;
+  --muted: #777985;
+  --cream: #fffaf3;
+  --paper: #ffffff;
+  --orange: #e88b56;
+  --orange-dark: #c96e3b;
+  --peach: #fbe8da;
+  --line: #eee5dc;
+  --green: #6b9a7d;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--cream); }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+button, a { color: transparent; }
+.login-page { min-height: 100vh; ; place-items: center; padding: 24px; background: radial-gradient(circle at 15% 20%, #f8dfca 0, transparent 30%), radial-gradient(circle at 85% 85%, #f4e4d7 0, transparent 28%), var(--cream); }
+.login-card { width: min(100%, 430px); background: white; border: 1px solid var(--line); border-radius: 24px; padding: 38px; box-shadow: 0 18px 55px #795b4010; animation: rise .55s ease both; }
+.brand-mark { width: 48px; height: 48px; display: grid; place-items: center; background: var(--orange); color: white; border-radius: 15px; font-weight: 800; font-size: 22px; }
+.brand-mark.small { width: 29px ; height: 34px; border-radius: 11px; font-size: 16px; display: inline-grid; vertical-align: middle; margin-right: 18px; }
+.eyebrow { color: var(--orange-dark); font-size: 11px; letter-spacing: 1.7px; font-weight: 700; margin: 23px 0 9px; }
+h1 { font-size: clamp(26px, 4vw, 34px); letter-spacing: -1px; margin: 0 0 10px; }
+h2 { margin: 10px 0; font-size: 20px; }
+h3 { margin: 10px 0 4px; }
+.muted { color: var(--muted); line-height: 1.6; font-size: 14px; }
+.login-card .muted { margin: 0 0 26px; }   <!--smjh ni aya -- >
+label { display: block; font-size: 13px; font-weight: 700; margin: 17px 0 8px; }
+input, select, textarea { width: 100%; background: #fffdfa; border: 1px solid #e8dfd6; border-radius: 11px; padding: 13px 14px; color: var(--ink); outline: none; transition: border .2s, box-shadow .2s; }
+input:focus, select:focus, textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 3px #e88b561b; }
+.primary-btn, .secondary-btn { border: 0; border-radius: 11px; padding: 13px 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; transition: transform .18s, background .18s; }
+<!--SMJH NI AYA-->
+.primary-btn { background: var(--orange); color: white; }
+.primary-btn:hover { background: var(--orange-dark); transform: translateY(-1px); }
+.secondary-btn { background: #f8eee5; color: #8e5737; }
+.secondary-btn:hover { background: #f2e1d2; transform: translateY(-1px); }
+.login-card .primary-btn { width: 100%; margin-top: 22px; }<!--SMJH NI AAYA-->
+.small-note { font-size: 12px; text-align: center; color: #96939a; margin: 20px 0 0; }
+.topbar { height: 74px; padding: 0 max(5vw, 22px); display: flex; align-items: center; justify-content: space-between; background: #fff; border-bottom: 1px solid var(--line); }
+.brand { font-size: 17px; font-weight: 800; letter-spacing: -.4px; }
+.top-actions { display: flex; gap: 12px; align-items: center; }
+.icon-btn { border: 0; border-radius: 50%; width: 40px; height: 40px; color: #965b3c; background: var(--peach); font-size: 21px; cursor: pointer; }
+.text-btn { border: 0; background: transparent; color: #8c6046; font-size: 13px; font-weight: 700; cursor: pointer; }
+.dashboard-wrap { width: min(1100px, 90%); margin: 45px auto; }
+.welcome-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+.welcome-row .eyebrow { margin-top: 0; }
+.welcome-art { width: 140px; height: 120px; border-radius: 30px 22px 32px 20px; background: #f5ddc8; display: grid; place-items: center; position: relative; color: #c17b4d; transform: rotate(3deg); }
+.welcome-art span { font-size: 68px; line-height: 1; }
+.welcome-art i { position: absolute; top: 15px; right: 20px; font-style: normal; animation: float 3s ease-in-out infinite; }
+.quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.action-card { background: white; padding: 25px; border: 1px solid var(--line); border-radius: 19px; min-height: 245px; box-shadow: 0 8px 28px #795b4008; }
+.action-card p { color: var(--muted); font-size: 13px; line-height: 1.65; min-height: 58px; }
+.card-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: var(--peach); color: #b66e43; font-size: 22px; }
+.link-btn { margin-top: 8px; }
+.info-strip { display: flex; gap: 14px; align-items: center; background: #f7eee4; padding: 17px 20px; border-radius: 14px; margin-top: 22px; }
+.strip-icon { background: white; color: var(--orange-dark); border-radius: 50%; width: 28px; height: 28px; display: grid; place-items: center; font-weight: bold; }
+.info-strip p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+.modal-backdrop { position: fixed; inset: 0; background: #25232c75; display: grid; place-items: center; padding: 20px; z-index: 5; }
+.modal-backdrop[hidden] { display: none; }
+.profile-modal { background: white; border-radius: 22px; width: min(100%, 390px); padding: 28px; position: relative; animation: rise .25s ease both; }
+.close-btn { position: absolute; top: 16px; right: 17px; border: 0; background: #f7eee7; width: 32px; height: 32px; border-radius: 50%; font-size: 21px; cursor: pointer; }
+.profile-avatar { width: 58px; height: 58px; margin-top: 18px; border-radius: 18px; background: var(--peach); color: #b66e43; display: grid; place-items: center; font-size: 28px; }
+.profile-modal .muted { margin: 0 0 16px; font-size: 12px; }
+.detail-list { border-top: 1px solid var(--line); }
+.detail-list div { display: flex; justify-content: space-between; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+.detail-list span { color: var(--muted); }
+.detail-list strong { text-align: right; }
+.form-wrap { width: min(800px, 90%); margin: 42px auto; }
+.form-heading { margin-bottom: 24px; }
+.form-heading .eyebrow { margin-top: 0; }
+.booking-form { background: white; border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 px 18px; }
+.booking-form label { margin-top: 13px; }
+.booking-form .primary-btn { margin-top: 22px; }
+.optional { font-weight: 400; color: var(--muted); }
+.success-message { background: #edf6ef; color: #477957; padding: 12px; border-radius: 10px; font-size: 13px; margin: 15px 0 0; }
+.chat-page { width: min(1050px, 92%); margin: 34px auto; }
+.chat-heading .eyebrow { margin-top: 0; }
+.chat-layout { display: grid; grid-template-columns: 280px 1fr; min-height: 490px; background: white; border: 1px solid var(--line); border-radius: 19px; overflow: hidden; margin-top: 22px; }
+.contact-panel { border-right: 1px solid var(--line); padding: 18px 12px; background: #fffdf9; }
+.contact-title { display: flex; justify-content: space-between; padding: 4px 9px 14px; font-weight: 700; font-size: 14px; }
+.contact-title span { background: var(--peach); color: #a5633e; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+.contact { display: flex; width: 100%; align-items: center; gap: 10px; border: 0; background: transparent; padding: 12px 9px; border-radius: 12px; text-align: left; cursor: pointer; position: relative; }
+.contact.active { background: #f7e9dc; }
+.contact strong, .conversation-header strong { display: block; font-size: 13px; }
+.contact small, .conversation-header small { display: block; color: var(--muted); font-size: 11px; margin-top: 4px; }
+.avatar { width: 38px; height: 38px; flex: 0 0 38px; border-radius: 13px; background: #dcebe0; color: #527a60; display: grid; place-items: center; font-size: 12px; font-weight: 700; }
+.avatar.coral { background: #f6ded8; color: #a76656; }
+.avatar.yellow { background: #f6edcf; color: #967d37; }
+.online-dot { width: 7px; height: 7px; background: #75a983; border-radius: 50%; position: absolute; right: 12px; top: 16px; }
+.conversation { display: flex; flex-direction: column; min-width: 0; }
+.conversation-header { display: flex; align-items: center; gap: 11px; padding: 17px 20px; border-bottom: 1px solid var(--line); }
+.chat-demo-label { margin-left: auto; font-size: 10px; color: #a16a48; background: #fbefe4; padding: 6px 9px; border-radius: 10px; }
+.message-area { flex: 1; padding: 22px; background: linear-gradient(#fff, #fffdfa); display: flex; flex-direction: column; gap: 13px; min-height: 330px; }
+.day-label { font-size: 9px; color: #aaa1a0; text-align: center; letter-spacing: 1.3px; margin-bottom: 4px; }
+.message { max-width: 75%; padding: 12px 14px 8px; border-radius: 14px; font-size: 13px; line-height: 1.5; animation: rise .2s ease both; }
+.message small { display: block; text-align: right; font-size: 9px; color: #9c9694; margin-top: 5px; }
+.message.received { align-self: flex-start; background: #f5eee7; border-bottom-left-radius: 4px; }
+.message.sent { align-self: flex-end; background: #e4f0e6; border-bottom-right-radius: 4px; }
+.message-form { display: flex; gap: 10px; padding: 14px; border-top: 1px solid var(--line); }
+.message-form input { border-radius: 25px; padding: 12px 16px; }
+.message-form button { width: 44px; height: 44px; flex: 0 0 44px; border: 0; border-radius: 50%; background: var(--orange); color: white; cursor: pointer; font-size: 18px; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@media (max-width: 760px) { .quick-grid { grid-template-columns: 1fr; } .action-card { min-height: 0; } .welcome-art { width: 95px; height: 95px; } .welcome-art span { font-size: 50px; } .chat-layout { grid-template-columns: 1fr; } .contact-panel { border-right: 0; border-bottom: 1px solid var(--line); } .contact { display: inline-flex; width: auto; min-width: 190px; } .contact-panel { overflow-x: auto; white-space: nowrap; } .contact-title { padding-bottom: 8px; } .conversation { min-height: 440px; } .form-grid { grid-template-columns: 1fr; } .login-card { padding: 28px; } }
+
+/* No-JS success message: shown only when the URL ends with #bookingMessage */
+#bookingMessage { display: none; }
+#bookingMessage:target { display: block; }
+
+/* ---------- Images and background patterns (no JS) ---------- */
+body { background: var(--cream) url(pattern.svg) repeat; }
+.login-page { background: radial-gradient(circle at 15% 20%, #f8dfca 0, transparent 30%), radial-gradient(circle at 85% 85%, #f4e4d7 0, transparent 28%), url(pattern.svg) repeat, var(--cream); }
+.login-banner { display: block; width: 100%; height: auto; border-radius: 16px; margin-bottom: 8px; }
+.page-banner { display: block; width: 100%; height: 170px; object-fit: cover; border-radius: 20px; border: 1px solid var(--line); margin-bottom: 24px; }
+.welcome-row { background: linear-gradient(135deg, #fbe8da, #fff3e8); border: 1px solid var(--line); border-radius: 22px; padding: 24px 28px; position: relative; overflow: hidden; }
+.welcome-row::before { content: ""; position: absolute; inset: 0; background: url(pattern.svg) repeat; opacity: .8; pointer-events: none; }
+.welcome-row > * { position: relative; }
+.welcome-art { width: 200px; height: 140px; overflow: hidden; background: #f5ddc8; }
+.welcome-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.action-card { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ccircle cx='100' cy='20' r='60' fill='%23fbe8da' opacity='.55'/%3E%3Ccircle cx='100' cy='20' r='38' fill='%23fff' opacity='.7'/%3E%3C/svg%3E") no-repeat top right; }
+.info-strip { background: repeating-linear-gradient(135deg, #f7eee4 0 14px, #f3e6d8 14px 28px); }
+.profile-avatar { width: 72px; height: 72px; object-fit: contain, display: block; }
+.message-area { background: url(pattern.svg) repeat, #fffdfa; }
+@media (max-width: 760px) {
+  .welcome-row { padding: 18px; }
+  .welcome-art { width: 110px; height: 90px; }
+  .page-banner { height: 120px; }
+}

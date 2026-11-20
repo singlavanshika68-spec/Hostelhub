@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HostelHub | Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark small">H</span> HostelHub</a>
+    <div class="top-actions">
+      <a class="icon-btn" href="profile.html" aria-label="Open profile" style="display:grid;place-items:center">☺</a>
+      <a class="text-btn" href="index.html">Log out</a>
+    </div>
+  </header>
+  <main class="dashboard-wrap">
+    <section class="welcome-row">
+      <div>
+        <p class="eyebrow">STUDENT DASHBOARD</p>
+        <h1>Hey, Aditya 👋</h1>
+        <p class="muted">Your hostel information and quick actions, all in one place.</p>
+      </div>
+      <div class="welcome-art"><img src="hostel.svg" alt="Hostel building illustration"></div>
+    </section>
+    <section class="quick-grid">
+      <article class="action-card booking-card">
+        <div class="card-icon">⌂</div>
+        <h2>Book a hostel</h2>
+        <p>New to the hostel? Submit your student details for room allocation.</p>
+        <a class="primary-btn link-btn" href="booking.html">Start booking <span>→</span></a>
+      </article>
+      <article class="action-card chat-card">
+        <div class="card-icon">☏</div>
+        <h2>Student chat</h2>
+        <p>Open a sample conversation with hostel residents.</p>
+        <a class="secondary-btn link-btn" href="chat.html">Open chat <span>→</span></a>
+      </article>
+      <article class="action-card profile-card">
+        <div class="card-icon">☺</div>
+        <h2>My profile</h2>
+        <p>Check your room, hostel, contact number and warden details.</p>
+        <a class="secondary-btn link-btn" href="profile.html">View profile <span>→</span></a>
+      </article>
+    </section>
+    <section class="info-strip">
+      <div class="strip-icon">i</div>
+      <div><strong>Room allocation</strong><p>Booking requests are shown as pending until the warden assigns a room.</p></div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>HostelHub | Booking Request</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark small">H</span> HostelHub</a>
+    <a class="text-btn" href="dashboard.html">← Dashboard</a>
+  </header>
+  <main class="form-wrap">
+    <img class="page-banner" src="room.svg" alt="Hostel room illustration">
+    <div class="form-heading">
+      <p class="eyebrow">ROOM ALLOCATION</p>
+      <h1>Hostel booking request</h1>
+      <p class="muted">Fill in your details. The warden can allocate a room after reviewing your request.</p>
+    </div>
+    <form class="booking-form" id="bookingForm" action="booking.html#bookingMessage">
+      <div class="form-grid">
+        <div><label for="fullName">Full name</label><input id="fullName" required placeholder="Your full name"></div>
+        <div><label for="regNumber">Registration number</label><input id="regNumber" required placeholder="e.g. 24CSE102"></div>
+        <div><label for="phone">Contact number</label><input id="phone" type="tel" required placeholder="Your phone number"></div>
+        <div><label for="course">Course / department</label><input id="course" required placeholder="e.g. Computer Science"></div>
+        <div><label for="hostel">Preferred hostel</label><select id="hostel"><option>BH7</option><option>Any available hostel</option></select></div>
+        <div><label for="roomType">Room preference</label><select id="roomType"><option>Any available room</option><option>Single</option><option>Shared</option></select></div>
+      </div>
+      <label for="notes">Additional notes <span class="optional">(optional)</span></label>
+      <textarea id="notes" rows="3" placeholder="Anything the warden should know?"></textarea>
+      <button class="primary-btn" type="submit">Submit request <span>→</span></button>
+      <p id="bookingMessage" class="success-message">Your booking request has been submitted. Room allocation is pending.</p>
+    </form>
+  </main>
+</body>
+</html>
